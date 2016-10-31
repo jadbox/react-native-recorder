@@ -9,6 +9,8 @@
     "native-base": "^0.5.11",
     "react": "15.3.2",
     "react-native": "^0.34.1",
-    "react-native-audio": "^2.2.0"
+    "react-native-audio": "^2.2.0",
+    "react-native-fs": "^2.0.1-rc.2",
+    "react-native-pdf-view": "^0.3.2"
   }
 }

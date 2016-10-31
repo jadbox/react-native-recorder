@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import MainMenu from './MainMenu';
 import Record from './Record';
+import Prompt from './Prompt';
 
 export default class Setup extends Component {
   render() {
@@ -27,7 +28,7 @@ export default class Setup extends Component {
       initialRoute={routes[0]}
       initialRouteStack={routes}
       renderScene={this.navigatorRenderScene}
-      style={{padding: 100}}
+      style={{padding: 1}}
     />
   );
   }
@@ -37,11 +38,13 @@ export default class Setup extends Component {
     //_navigator = navigator;
     switch (route.id) {
 
+      case 'EULA':
+        return (<Prompt navigator={navigator} title="record" style={styles.container} />); // TODO: make component
       case 'record':
-        return (<Record navigator={navigator} title="record" />); // TODO: make component
+        return (<Record navigator={navigator} title="record"/>); // TODO: make component
       case 'main':
       default:
-        return (<MainMenu navigator={navigator} title="main"/>);
+        return (<MainMenu navigator={navigator} title="main"/> );
     }
   }
 

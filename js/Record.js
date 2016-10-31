@@ -32,7 +32,7 @@ export default class Record extends Component {
     const nav = this.props.navigator;
 
     return (
-      <Container>
+      <Container style={{padding: 100}}>
                 <Content>
                     <Card>
                         <CardItem onPress={()=>this.record()}>

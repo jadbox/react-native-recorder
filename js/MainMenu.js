@@ -14,9 +14,13 @@ export default class MainMenu extends Component {
     const nav = this.props.navigator;
 
     return (
-      <Container>
+      <Container style={{padding: 100}}>
                 <Content>
                     <Card>
+                        <CardItem onPress={ () => nav.push({id:'EULA'}) }>
+                            <Icon name='ios-info' />
+                            <Text>EULA</Text>
+                        </CardItem>
                         <CardItem onPress={ () => nav.push({id:'record'}) }>
                             <Icon name='ios-mic' />
                             <Text>Why Cry?</Text>
